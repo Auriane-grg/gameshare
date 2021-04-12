@@ -1,0 +1,14 @@
+<%= simple_form_for(@game) do |f| %>
+  <%= f.input :name, placeholder: "Game's name" %>
+  <%= f.input :description, placeholder: "Explain what this game is about"  %>
+  <%= f.input :price, as: :numeric, placeholder: "Price per day"  %>
+  <%= f.input :category, prompt: "Select", collection:  ["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"] %>
+  <%= f.input :condition, prompt: "Select", collection: ["very good state", "good state", "satisfactory"] %>
+  <%= f.input :min_age, as: :numeric, placeholder: "3" %>
+  <%= f.input :max_age, as: :numeric, placeholder: "99"  %>
+  <%= f.input :min_players, as: :numeric, placeholder: "4"  %>
+  <%= f.input :max_players, as: :numeric, placeholder: "12" %>
+  <%= f.input :time, placeholder: "45 min" %>
+  <%= f.input :content, placeholder: "25 cards, 1 board, 5 pawns" %>
+  <%= f.submit %>
+<% end %>

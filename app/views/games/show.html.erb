@@ -1,0 +1,16 @@
+
+<%= @game.name %>
+<%= @game.description %>
+<%= @game.price %>
+<%= @game.category %>
+<%= @game.condition %>
+<%= @game.min_age %>
+<%= @game.max_age %>
+<%= @game.min_players %>
+<%= @game.max_players %>
+<%= @game.time %>
+<%= @game.content %>
+
+<%= link_to 'EDIT', edit_game_path(@game) %>
+
+<%= link_to 'DELETE', game_path(@game), method: :delete, data: { confirm: "Are you sure?" }  %>
