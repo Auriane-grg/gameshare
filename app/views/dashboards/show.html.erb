@@ -1,0 +1,24 @@
+<div id="dashboard">
+  <h1 style='text-align:center; margin-bottom: 50px'>My profile</h1>
+
+  <div id="my-profile">
+    <div id="my-infos">
+      <div id="my-photo">
+        <%= cl_image_tag @user.photo.key %>
+      </div>
+      <div id="my-details">
+        <h2><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h2>
+        <p style='margin: 0;'><%= @user.email %></p>
+        <hr>
+        <p style='margin: 0;'><%= @user.phone %></p>
+        <hr>
+        <p style='margin: 0;'><%= @user.street_number %> <%= @user.street %></p>
+        <p style='margin: 0;'><%= @user.city_code %> <%= @user.city.capitalize %></p>
+        <p style='color: #b8562a; text-align: right; margin: 0;'>update</p>
+      </div>
+    </div>
+    <div id="right-infos">
+    <h2>Colonne de droite</h2>
+    </div>
+  </div>
+</div>

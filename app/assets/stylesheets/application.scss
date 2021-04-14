@@ -11,3 +11,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1, h2, h3, h4, h5, h6, p, a{
+  font-family: 'Actor', sans-serif;
+}
+
+p{
+  color:grey;
+}
+
+h2{
+  font-size: 1.7rem;
+}
