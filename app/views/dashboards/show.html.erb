@@ -14,7 +14,9 @@
         <hr>
         <p style='margin: 0;'><%= @user.street_number %> <%= @user.street %></p>
         <p style='margin: 0;'><%= @user.city_code %> <%= @user.city.capitalize %></p>
-        <p style='color: #b8562a; text-align: right; margin: 0;'>update</p>
+        <div style='text-align: right;'>
+          <%= link_to 'update', edit_user_registration_path, class: 'dashboard-box-link' %>
+        </div>
       </div>
     </div>
     <div id="right-infos">

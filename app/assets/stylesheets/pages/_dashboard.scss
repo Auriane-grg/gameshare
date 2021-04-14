@@ -7,6 +7,15 @@
   }
 }
 
+.dashboard-box-link{
+  color: $bric;
+  margin: 0;
+  &:hover{
+    text-decoration: none;
+    color: $bric;
+  }
+}
+
 @media(min-width: 900px) {
   #dashboard{
     padding: 5%;
