@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# In Dobble, there is always one and only one identical symbol between each card. Find it and you win! from 6 2 to 6 players 55 cards

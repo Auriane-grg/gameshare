@@ -1,0 +1,28 @@
+#games-index{
+ h1{
+   margin: 5% 5% 0% 5%;
+ }
+}
+#games-left{
+  border-radius: 5px;
+}
+
+@media(min-width: 900px) {
+  #games{
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+    #games-left{
+      padding: 15px;
+      width: 30%;
+      display: block;
+      justify-content: space-between;
+      background-color: white;
+    }
+    #games-right{
+      width: 65%;
+      display: grid;
+      justify-content: space-between;
+    }
+  }
+}
