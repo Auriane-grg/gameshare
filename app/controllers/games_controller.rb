@@ -70,7 +70,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :price, :description, :category, :condition, :min_age, :max_age, :min_players, :max_players, :time, :content)
+    params.require(:game).permit(:name, :price, :description, :category, :condition, :min_age, :max_age, :min_players, :max_players, :time, :content, :photo)
   end
   
 end

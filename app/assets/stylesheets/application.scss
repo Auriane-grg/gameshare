@@ -16,10 +16,55 @@ h1, h2, h3, h4, h5, h6, p, a{
   font-family: 'Actor', sans-serif;
 }
 
+h1, h2{
+  font-weight: bold;
+}
 p{
   color:grey;
 }
 
 h2{
   font-size: 1.7rem;
+}
+
+.black{
+    color:black
+}
+
+
+.btn-inside{
+  text-align: center;
+  width: 100%;
+  .bric-btn{
+    padding: 15px;
+    background-color: $bric;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    p{
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+input.bric-btn{
+  width: 100%;
+  padding: 15px;
+    background-color: $bric;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    p{
+      margin: 0;
+      color: white;
+      text-transform: capitalize;
+    }
 }

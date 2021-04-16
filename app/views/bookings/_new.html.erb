@@ -1,6 +1,14 @@
-<p>Book this boat</p>
+<h2>Book it!</h2><br>
 <%= simple_form_for [game, booking] do |f| %>
+  <div class="date-choice">
+  <p>From</p>
   <%= f.date_field :start, value: Date.today %>
+  </div>
+  <div class="date-choice">
+  <p>To </p>
   <%= f.date_field :end, value: Date.today %>
-  <%= f.submit %>
+  </div>
+  <p>You will pay the owner when taking his game.</p><br>
+  <p id='total-price'><span id='start-price'><%= game.price %></span> $ for <span id="day-count">1</span> day</p>
+ <%= f.submit 'BOOK THIS GAME', :class => 'bric-btn' %>
 <% end %>

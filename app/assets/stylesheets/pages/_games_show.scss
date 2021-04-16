@@ -1,0 +1,183 @@
+@media(min-width:900px){
+  #show-game{
+    margin: 5%;
+    background-color: none;
+    display: flex;
+    #left-game{
+      width: 80%;
+      img{
+        width: 70%;
+      }
+      #game-titles{
+        padding: 0%;
+      }
+      #game-about{
+        padding: 0%;
+        display: flex;
+        justify-content: left;
+        margin-top: 15px;
+        p{
+          margin-right: 15px;
+        }
+      }
+      #game-description{
+        padding:0%;
+      }
+      .btn-inside{
+        display: none;
+      }
+    }
+    #popup-frame{
+      display: block;
+    }
+    #booking-popup{
+      display: block;
+      text-align: center;
+      width: 25%;
+      background-color: white;
+      padding: 3%;
+      position: fixed;
+      top: 116px;
+      right: 50px;
+      bottom: 50px;
+      border-radius: 5px;
+      input{
+        margin-bottom: 20px;
+      }
+      .fa-times{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width:900px){
+  #show-game{
+    display: block;
+    margin: 15%;
+    background-color: white;
+    padding: 5%;
+    img{
+      width: 100%;
+    }
+    #game-titles{
+      padding: 5%;
+    }
+    #game-about{
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+    #game-description{
+      padding:5%;
+    }
+  }
+  .btn-inside{
+    display: block;
+  }
+  #popup-frame{
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 5%;
+    .fa-times{
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    #booking-popup{
+      z-index: 2;
+      text-align: center;
+      background-color: white;
+      padding: 5%;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 50px;
+      left: 10px;
+      right: 10px;
+      input{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+@media(max-width:500px){
+  #show-game{
+    display: block;
+    margin: 0%;
+    background-color: #f4f4f4;
+    padding: 0;
+    img{
+      width: 100%;
+    }
+    #game-titles{
+      padding: 5%;
+    }
+    #game-about{
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+      p{
+        margin: 0
+      }
+
+    }
+    #game-description{
+      padding:5%;
+    }
+    .btn-inside{
+      display: block;
+      position: fixed;
+      bottom: 5px;
+      z-index: 1;
+    }
+    #popup-frame{
+      display: none;
+      background-color: rgba(0,0,0,0.3);
+      z-index: 1;
+      position:fixed;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      padding: 5%;
+      .fa-times{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+    }
+    #booking-popup{
+      z-index: 2;
+      text-align: center;
+      background-color: white;
+      padding: 5%;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 50px;
+      left: 10px;
+      right: 10px;
+      input{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.date-choice{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#total-price{
+  color: $bric;
+  font-weight: bold;
+}

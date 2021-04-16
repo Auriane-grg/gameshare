@@ -1,19 +1,35 @@
+<div id='show-game'>
+  <div id='left-game'>
+    <div id="game-titles">
+      <h1><%= @game.name %></h1>
+      <p><%= @game.category %> of <%= @game.user.first_name %> <%= @game.user.last_name %></p>
+    </div>
+    <%= cl_image_tag @game.photo.key %>
+    <div id="game-about">
+        <p><%= @game.min_age %> to <%= @game.max_age %> years old</p>
+        <p><%= @game.min_players %> to <%= @game.max_players %> players</p>
+        <p><%= @game.time %></p>
+    </div>
+    <div id="game-description">
+      <p class="black"><%= @game.description %></p>
+      <p>This game contains: <%= @game.content %>. It is in <%= @game.condition %>.</p>
+    </div>
+    <div class='btn-inside'>
+      <button class='bric-btn'>
+      <p>Book this playboard - <%= @game.price %> $ a day</p>
+      </button>
+    </div>
+  </div>
 
-<%= @game.name %>
-<%= @game.description %>
-<%= @game.price %>
-<%= @game.category %>
-<%= @game.condition %>
-<%= @game.min_age %>
-<%= @game.max_age %>
-<%= @game.min_players %>
-<%= @game.max_players %>
-<%= @game.time %>
-<%= @game.content %>
-
-<%= link_to 'EDIT', edit_game_path(@game) %>
-
-<%= link_to 'DELETE', game_path(@game), method: :delete, data: { confirm: "Are you sure?" }  %>
 
 
-<%= render "bookings/new", game: @game, booking: @booking %>
+<div id="popup-frame">
+  <div id="booking-popup">
+  <i class="fas fa-times"></i>
+    <%= render "bookings/new", game: @game, booking: @booking %>
+  </div>
+</div>
+
+
+  
+</div>
