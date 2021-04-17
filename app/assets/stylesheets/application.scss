@@ -61,10 +61,40 @@ input.bric-btn{
     font-weight: bold;
     text-align: center;
     border: none;
-    border-radius: 50px;
+    border-radius: 20px;
     p{
       margin: 0;
       color: white;
       text-transform: capitalize;
     }
+}
+
+
+.white-btn{
+  text-align: left;
+  padding: 12px;
+  background-color: white;
+  text-decoration: none;
+  color: color;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  p{
+    margin: 0;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+  .fa-chevron-right{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
+
+.orange{
+  color: $bric;
 }

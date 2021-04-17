@@ -1,29 +1,63 @@
 <div id="dashboard">
-  <h1 style='text-align:center; margin-bottom: 50px'>My profile</h1>
-
   <div id="my-profile">
-    <div id="my-infos">
-      <div id="my-photo">
-        <%= cl_image_tag @user.photo.key %>
-      </div>
-      <div id="my-details">
-        <h2><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h2>
-        <p style='margin: 0;'><%= @user.email %></p>
-        <hr>
-        <p style='margin: 0;'><%= @user.phone %></p>
-        <hr>
-        <p style='margin: 0;'><%= @user.street_number %> <%= @user.street %></p>
-        <p style='margin: 0;'><%= @user.city_code %> <%= @user.city.capitalize %></p>
-        <div style='text-align: right;'>
-          <%= link_to 'update', edit_user_registration_path, class: 'dashboard-box-link' %>
+    <div id="left-dash">
+      <button class="white-btn">My games <i class="fas fa-chevron-right"></i></button>
+      <button class="white-btn">My games' bookings <i class="fas fa-chevron-right"></i></button>
+      <button class="white-btn">My bookings <i class="fas fa-chevron-right"></i></button>
+      <div id="my-infos">
+        <div id="my-photo">
+          <%= cl_image_tag @user.photo.key %>
+        </div>
+        <div id="my-details">
+          <h2><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h2>
+          <p style='margin: 0;'><%= @user.email %></p>
+          <hr>
+          <p style='margin: 0;'><%= @user.phone %></p>
+          <hr>
+          <p style='margin: 0;'><%= @user.street_number %> <%= @user.street %></p>
+          <p style='margin: 0;'><%= @user.city_code %> <%= @user.city.capitalize %></p>
+          <div style='text-align: right;'>
+            <%= link_to 'update', edit_user_registration_path, class: 'dashboard-box-link' %>
+          </div>
         </div>
       </div>
     </div>
     <div id="right-infos">
-    <h2>Colonne de droite</h2>
+      <div id="dash-games">
+      <h1 style= "margin-bottom: 20px">My games</h1>
+      <% if @games.count == 0 %>
+        <p>No games at the moment</p>
+        <button class="bric-btn">ADD A PLAYBOARD</button>
+      <% else %>
+        <div class="games-grid">
+          <% @games.each do |game| %>
+            <div class="game-box">
+              <%= cl_image_tag game.photo.key %>
+              <h2 style="margin-top: 20px"><%= game.name %></h2>
+              <div class="about-this-game">
+                <p><%= game.category %></p>
+                <p><%= game.time %></p>
+              </div>
+              <div class="about-this-game">
+              <p><%= game.min_age %> to <%= game.max_age %> years old</p> 
+              <p><%= game.min_players %> to <%= game.max_players %> players</p>
+              </div>
+              <p style="margin-top: 20px" class="black"><%= game.description %></p>
+              <p class="black">This game contains: <%= game.content %>. It is in <%= game.condition %>.</p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      </div>
+      <div id="my-games-bookings" class='d-none'>
+      <h1>My games' bookings</h1>
+      </div>
+      <div id="my-bookings" class='d-none'>
+      <h1>My bookings</h1>
+      </div>
     </div>
   </div>
 </div>
 
-  <%= link_to 'EDIT', edit_game_path(@game) %>
-  <%= link_to 'DELETE', game_path(@game), method: :delete, data: { confirm: "Are you sure?" }  %>
+  <%# <%= link_to 'EDIT', edit_game_path(@game) %>
+  <%#<%= link_to 'DELETE', game_path(@game), method: :delete, data: { confirm: "Are you sure?" }  %>

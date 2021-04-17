@@ -22,8 +22,10 @@
     #my-profile {
       display: flex;
       justify-content: space-between;
-      #my-infos{
+      #left-dash{
         width: 20%;
+      }
+      #my-infos{
         display: block;
         #my-photo{
           padding: 0px;
@@ -42,6 +44,11 @@
       }
       #right-infos{
         width: 75%;
+        .games-grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 20px;
+        }
       }
     }
   }
@@ -53,8 +60,10 @@
     #my-profile {
       display: flex;
       justify-content: space-between;
-      #my-infos{
+      #left-dash{
         width: 40%;
+      }
+      #my-infos{
         display: block;
         #my-photo{
           padding: 0px;
@@ -83,6 +92,10 @@
     padding: 5%;
     #my-profile {
       display: block;
+      #left-dash{
+        width: 100%;
+        position: sticky;
+      }
       #my-infos{
         width: 100%;
         display: flex;
