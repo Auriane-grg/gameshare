@@ -10,3 +10,29 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+@media(max-width:500px){
+  .navbar-lewagon{
+    display: none;
+  }
+}
+
+@media(min-width:500px){
+  .navbar-lewagon{
+    display: flex;
+    .nav-link{
+      margin-right: 20px;
+      p{
+        margin-bottom: 0px;
+      }
+      .nav-active{
+        color: black;
+      }
+    }
+    .dropdown{
+      position: absolute;
+      right: 20px;
+    }
+  }
+}
