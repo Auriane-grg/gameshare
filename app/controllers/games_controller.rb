@@ -55,7 +55,7 @@ class GamesController < ApplicationController
     authorize @game
     @game.update(game_params)
 
-    redirect_to game_path(@game)
+    redirect_to dashboard_path
 
   end
 
@@ -64,7 +64,7 @@ class GamesController < ApplicationController
     authorize @game
     @game.destroy
 
-    redirect_to games_path
+    redirect_to dashboard_path
   end
 
   private

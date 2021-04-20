@@ -19,6 +19,12 @@
 @media(min-width: 900px) {
   #dashboard{
     padding: 5%;
+    #menu-desktop{
+      display: block;
+    }
+    #menu-mobile{
+      display: none;
+    }
     #my-profile {
       display: flex;
       justify-content: space-between;
@@ -63,6 +69,12 @@
       #left-dash{
         width: 40%;
       }
+      #menu-desktop{
+        display: block;
+      }
+      #menu-mobile{
+        display: none;
+      }
       #my-infos{
         display: block;
         #my-photo{
@@ -92,6 +104,13 @@
     padding: 5%;
     #my-profile {
       display: block;
+      #menu-desktop{
+        display: none;
+      }
+      #menu-mobile{
+        display: block;
+        margin-top: 20px;
+      }
       #left-dash{
         width: 100%;
         position: sticky;
@@ -120,4 +139,9 @@
       }
     }
   }
+}
+
+.active-red{
+  background-color: $bric !important;
+  color: white;
 }

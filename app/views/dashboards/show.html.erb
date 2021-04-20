@@ -1,9 +1,12 @@
 <div id="dashboard">
   <div id="my-profile">
+
     <div id="left-dash">
-      <button class="white-btn">My games <i class="fas fa-chevron-right"></i></button>
-      <button class="white-btn">My games' bookings <i class="fas fa-chevron-right"></i></button>
-      <button class="white-btn">My bookings <i class="fas fa-chevron-right"></i></button>
+      <div id="menu-desktop">
+        <button class="white-btn my-games-btn active-red">My games <i class="fas fa-chevron-right"></i></button>
+        <button class="white-btn my-games-booking-btn">My games' bookings <i class="fas fa-chevron-right"></i></button>
+        <button class="white-btn my-booking-btn">My bookings <i class="fas fa-chevron-right"></i></button>
+      </div>
       <div id="my-infos">
         <div id="my-photo">
           <%= cl_image_tag @user.photo.key %>
@@ -21,43 +24,58 @@
           </div>
         </div>
       </div>
+      <div id="menu-mobile">
+        <button class="white-btn my-games-btn active-red">My games <i class="fas fa-chevron-right"></i></button>
+        <button class="white-btn my-games-booking-btn">My games' bookings <i class="fas fa-chevron-right"></i></button>
+        <button class="white-btn my-booking-btn">My bookings <i class="fas fa-chevron-right"></i></button>
+      </div>
     </div>
+
     <div id="right-infos">
-      <div id="dash-games">
-      <h1 style= "margin-bottom: 20px">My games</h1>
-      <% if @games.count == 0 %>
-        <p>No games at the moment</p>
-        <button class="bric-btn">ADD A PLAYBOARD</button>
-      <% else %>
-        <div class="games-grid">
-          <% @games.each do |game| %>
-            <div class="game-box">
-              <%= cl_image_tag game.photo.key %>
-              <h2 style="margin-top: 20px"><%= game.name %></h2>
-              <div class="about-this-game">
-                <p><%= game.category %></p>
-                <p><%= game.time %></p>
+      <div id="dash-my-games">
+        <h1 style= "margin-bottom: 20px">My games</h1>
+        <% if @games.count == 0 %>
+          <p>No games at the moment</p>
+          <button class="bric-btn">ADD A PLAYBOARD TO RENT</button>
+        <% else %>
+          <div class="games-grid">
+            <% @games.each do |game| %>
+              <div class="game-box">
+                <%= cl_image_tag game.photo.key %>
+                <h2 style="margin-top: 20px"><%= game.name %></h2>
+                <div class="about-this-game">
+                  <p><%= game.category %></p>
+                  <p><%= game.time %></p>
+                </div>
+                <div class="about-this-game">
+                  <p><%= game.min_age %> to <%= game.max_age %> years old</p> 
+                  <p><%= game.min_players %> to <%= game.max_players %> players</p>
+                </div>
+                <p style="margin-top: 20px; height: 80px;" class="black"><%= game.description %></p>
+                <p class="black" style="height: 80px;">This game contains: <%= game.content %>. It is in <%= game.condition %>.</p>
+                <div class="last-line">
+                  <p class="black"><b><%= game.price %> $ a day</b></p>
+                  <div class="edit-game">
+                    <%= link_to edit_game_path(game) do %><i class="far fa-edit"></i><% end %>
+                    <%= link_to game_path(game), method: :delete, data: { confirm: "Are you sure?" } do %><i class="far fa-trash-alt"></i><% end %>
+                  </div>
+                  </div>
+                </div>
               </div>
-              <div class="about-this-game">
-              <p><%= game.min_age %> to <%= game.max_age %> years old</p> 
-              <p><%= game.min_players %> to <%= game.max_players %> players</p>
-              </div>
-              <p style="margin-top: 20px" class="black"><%= game.description %></p>
-              <p class="black">This game contains: <%= game.content %>. It is in <%= game.condition %>.</p>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
-      <div id="my-games-bookings" class='d-none'>
-      <h1>My games' bookings</h1>
+
+      <div id="dash-my-games-bookings" class='d-none'>
+        <h1>My games' bookings</h1>
       </div>
-      <div id="my-bookings" class='d-none'>
-      <h1>My bookings</h1>
+
+      <div id="dash-my-bookings" class='d-none'>
+        <h1>My bookings</h1>
       </div>
+
     </div>
+
   </div>
 </div>
-
-  <%# <%= link_to 'EDIT', edit_game_path(@game) %>
-  <%#<%= link_to 'DELETE', game_path(@game), method: :delete, data: { confirm: "Are you sure?" }  %>

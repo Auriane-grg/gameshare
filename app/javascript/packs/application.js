@@ -27,8 +27,9 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initBookingPrice} from '../plugins/init_booking_price';
-import { initBookingPop} from '../plugins/init_booking_pop'
+import { initBookingPrice } from '../plugins/init_booking_price';
+import { initBookingPop } from '../plugins/init_booking_pop';
+import { initDashboardBtn } from "../plugins/init_dashboard_btn";
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -36,4 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initBookingPrice();
   initBookingPop();
+  initDashboardBtn();
 });
