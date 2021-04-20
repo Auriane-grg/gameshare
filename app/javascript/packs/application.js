@@ -30,6 +30,7 @@ import "bootstrap";
 import { initBookingPrice } from '../plugins/init_booking_price';
 import { initBookingPop } from '../plugins/init_booking_pop';
 import { initDashboardBtn } from "../plugins/init_dashboard_btn";
+import { initDashboardMob } from "../plugins/init_dashboard_mob";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   initBookingPrice();
   initBookingPop();
   initDashboardBtn();
+  initDashboardMob();
 });
