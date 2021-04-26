@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def my_games
+    @games = Game.where(user: current_user)
+    authorize @games
+    @user = current_user
+  end
 end

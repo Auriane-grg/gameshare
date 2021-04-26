@@ -13,8 +13,10 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create]
   end
 
-  resource :dashboard, only: [:show]
+  resource :dashboard, only: [:show] do
+    get "/:my_games" => "pages#my_games"
+  end
+
   resources :favorites, only: [:index, :destroy]
-
-
+  resources :pages, only: [:my_games]
 end

@@ -21,4 +21,8 @@ class GamePolicy < ApplicationPolicy
 	def destroy?
 		record.user == user
 	end
+
+	def my_games?
+		return true
+	end
 end

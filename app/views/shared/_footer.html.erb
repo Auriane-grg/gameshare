@@ -3,9 +3,9 @@
     <i class="fas fa-home <%= 'footer-active' if request.fullpath == '/' %>"></i>
   <% end %>
   <%= link_to games_path do %>
-    <i class="fas fa-search <%= 'footer-active' if request.fullpath == '/games' %>"></i>
+    <i class="fas fa-search <%= 'footer-active' if request.fullpath.include? '/games' %>"></i>
   <% end %>
   <%= link_to dashboard_path do %>
-    <i class="far fa-user-circle <%= 'footer-active' if request.fullpath == '/dashboard' %>"></i>
+    <i class="far fa-user-circle <%= 'footer-active' if request.fullpath.include? '/dashboard' %>"></i>
   <% end %>
 </div>

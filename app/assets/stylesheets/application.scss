@@ -35,19 +35,29 @@ h2{
 .btn-inside{
   text-align: center;
   width: 100%;
-  .bric-btn{
-    padding: 15px;
-    background-color: $bric;
+}
+
+.bric-btn{
+  padding: 15px;
+  background-color: $bric;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  &:hover{
+    color:white;
     text-decoration: none;
+    background-color: rgb(224, 139, 139);
+  }
+  p{
+    margin: 0;
     color: white;
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    border-radius: 30px;
-    p{
-      margin: 0;
-      color: white;
-      text-transform: uppercase;
+    text-transform: uppercase;
+    &:hover{
+      color:white;
+      text-decoration: none;
     }
   }
 }

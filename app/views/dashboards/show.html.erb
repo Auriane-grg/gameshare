@@ -25,7 +25,10 @@
         </div>
       </div>
       <div id="menu-mobile">
-        <button class="white-btn my-games-mob active-red-mob">My games <i class="fas fa-chevron-right"></i></button>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+        <button class="white-btn my-games-mob">Log out <i class="fas fa-chevron-right"></i></button>
+        <% end %>
+        <a href="/dashboard/my_games" style="color: black;"><button class="white-btn" style="color: black;">My games <i class="fas fa-chevron-right"></i></a>
         <button class="white-btn my-games-booking-mob">My games' bookings <i class="fas fa-chevron-right"></i></button>
         <button class="white-btn my-booking-mob">My bookings <i class="fas fa-chevron-right"></i></button>
       </div>
@@ -33,16 +36,29 @@
 
     <div id="right-infos">
       <div id="dash-my-games">
-        <h1 style= "margin-bottom: 20px">My games</h1>
         <% if @games.count == 0 %>
-          <p>No games at the moment</p>
-          <button class="bric-btn">ADD A PLAYBOARD TO RENT</button>
+          <div class="games-count" style="display:inline-flex">
+            <h1 style="margin-right: 15px">No playboard at the moment! </h1>
+            <%= link_to new_game_path, class:"add-game-btn" do %><i class="fas fa-plus-circle"></i> ADD A PLAYBOARD<% end %>
+          </div>
+        <% elsif @games.count == 1 %>
+          <div class="games-count" style="display:inline-flex">
+            <h1>You have only 1 playboard! </h1>
+            <%= link_to new_game_path, class:"add-game-btn" do %><i class="fas fa-plus-circle"></i> ADD A PLAYBOARD<% end %>
+          </div>
         <% else %>
+          <div class="games-count" style="display:inline-flex">
+            <h1>You have <%= @games.count %> playboards! </h1>
+            <%= link_to new_game_path, class:"add-game-btn" do %><i class="fas fa-plus-circle"></i> ADD A PLAYBOARD<% end %>
+            
+          </div>
+        <% end %>
+        <% if @games.count != 0 %>
           <div class="games-grid">
             <% @games.each do |game| %>
               <div class="game-box">
-                <%= cl_image_tag game.photo.key %>
                 <h2 style="margin-top: 20px"><%= game.name %></h2>
+                <%= cl_image_tag game.photo.key %>
                 <div class="about-this-game">
                   <p><%= game.category %></p>
                   <p><%= game.time %></p>
@@ -58,7 +74,6 @@
                   <div class="edit-game">
                     <%= link_to edit_game_path(game) do %><i class="far fa-edit"></i><% end %>
                     <%= link_to game_path(game), method: :delete, data: { confirm: "Are you sure?" } do %><i class="far fa-trash-alt"></i><% end %>
-                  </div>
                   </div>
                 </div>
               </div>
