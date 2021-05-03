@@ -31,6 +31,8 @@
       #left-dash{
         width: 20%;
         position: sticky;
+        position: -webkit-sticky;
+        top : 200px;
       }
       #my-infos{
         display: block;

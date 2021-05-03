@@ -14,11 +14,12 @@
     justify-content: space-between;
     #games-left{
       padding: 15px;
-      width: 25%;
+      width: 300px;
       display: block;
       justify-content: space-between;
-      background-color: white;
       height: fit-content;
+      position: sticky;
+      top: 100px;
     }
     #games-right{
       width: 70%;
@@ -33,4 +34,14 @@
       }
     }
   }
+}
+
+.input-filter{
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 23px;
+  box-shadow: 6px 3px 3px rgba(192, 192, 164, 0.226);
 }

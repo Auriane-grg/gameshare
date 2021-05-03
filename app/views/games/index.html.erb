@@ -1,23 +1,17 @@
 <div id="games-index">
-  <h1>Board games where you want, whenever you want</h1>
+  <%# <h1>Board games where you want, whenever you want</h1> %>
 </div>
 <div id="games">
   <div id="games-left">
-  <p style="color: black"><b>Filters:</b></p>
+  <h3 style="color: black"><b>Filter your search:</b></h3>
     <%= form_tag games_path, method: :get do %>
-    <p>Category:</p>
-        <%= select_tag :category,
-          options_for_select(["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"]), prompt: 'Category' %>
-      <p>Age:</p>
-      <%= text_field_tag :age %>
-      <p>Number of players:</p>
-      <%= text_field_tag :players %>
-      <p>Max price per day:</p>
-      <%= text_field_tag :max_price %>
-      <p>City where you take the board:</p>
-      <%= text_field_tag :city %>
+      <%= select_tag :category, options_for_select(["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"]), prompt: 'Category of the game', class:'input-filter' %>
+      <%= text_field_tag :age, nil, placeholder: "Average players'age", class:'input-filter' %>
+      <%= text_field_tag :players, nil, placeholder: 'Number of players', class:'input-filter' %>
+      <%= text_field_tag :max_price, nil, placeholder: 'Max price you want', class:'input-filter' %>
+      <%= text_field_tag :city, nil, placeholder: 'City to take it', class:'input-filter'%>
       <br><br>
-      <%= submit_tag "SHOW PLAYBOARDS" %>
+      <%= submit_tag "SHOW PLAYBOARDS" , class:'bric-btn' %>
     <% end %>
   </div>
 
