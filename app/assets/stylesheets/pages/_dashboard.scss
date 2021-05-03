@@ -54,7 +54,7 @@
         .games-grid{
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          column-gap: 20px;
+          grid-gap: 20px;
         }
       }
     }
@@ -170,3 +170,7 @@
 //   border-radius: 30px;
 //   background-color: $bric;
 // }
+
+.games-count{
+  margin-bottom: 50px;
+}

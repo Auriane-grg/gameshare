@@ -3,9 +3,10 @@
   padding: 10px;
   border-radius: 30px;
   text-align: center;
-  margin-top: 50px;
   img{
     width: 90%;
+    height: 200px;
+    object-fit: contain;
     background-color: white;
     margin: 15px 0px;
   }
@@ -22,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    align-items: center;
   }
 
   .edit-game{
