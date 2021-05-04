@@ -3,16 +3,19 @@
 </div>
 <div id="games">
   <div id="games-left">
-  <h3 style="color: black"><b>Filter your search:</b></h3>
-    <%= form_tag games_path, method: :get do %>
-      <%= select_tag :category, options_for_select(["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"]), prompt: 'Category of the game', class:'input-filter' %>
-      <%= text_field_tag :age, nil, placeholder: "Average players'age", class:'input-filter' %>
-      <%= text_field_tag :players, nil, placeholder: 'Number of players', class:'input-filter' %>
-      <%= text_field_tag :max_price, nil, placeholder: 'Max price you want', class:'input-filter' %>
-      <%= text_field_tag :city, nil, placeholder: 'City to take it', class:'input-filter'%>
-      <br><br>
-      <%= submit_tag "SHOW PLAYBOARDS" , class:'bric-btn' %>
-    <% end %>
+    <h3 style="color: black"><b>Filter your search:</b></h3>
+    <div id="filters">
+      <%= form_tag games_path, method: :get do %>
+        <%= select_tag :category, options_for_select(["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"]), prompt: 'Category', class:'input-filter' %>
+        <%= text_field_tag :age, nil, placeholder: "Age", class:'input-filter' %>
+        <%= text_field_tag :players, nil, placeholder: 'Participants', class:'input-filter' %>
+        <%= text_field_tag :city, nil, placeholder: 'City', class:'input-filter'%>
+        <%= submit_tag "SHOW PLAYBOARDS" , class:'bric-btn submit-filter-desktop' %>
+        <button name="button" type="submit" id="send-btn" style="background-color: #D90429; padding: 5px; border-radius: 50px; border:none;" class="submit-filter-mobile">
+          <i class="fas fa-search" aria-hidden="true" style="color: white"></i>
+        </button>
+      <% end %>
+    </div>
   </div>
 
   <div id="games-right">
@@ -24,7 +27,7 @@
                 <%= cl_image_tag game.photo.key %>
                 <div class="about-this-game">
                   <p><%= game.category %></p>
-                  <p><%= game.min_players %> to <%= game.max_players %> players</p>
+                  <p><%= game.min_players %> to <%= game.max_players %> <i class="fas fa-user-friends"></i></p>
                 </div>
                 <div class="last-line">
                 <p class="black" style="margin-bottom: 0px"><b><%= game.price %> $ a day</b></p>

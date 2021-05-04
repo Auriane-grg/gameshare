@@ -3,9 +3,6 @@
    margin: 5% 5% 0% 5%;
  }
 }
-#games-left{
-  border-radius: 30px;
-}
 
 @media(min-width: 900px) {
   #games{
@@ -20,6 +17,24 @@
       height: fit-content;
       position: sticky;
       top: 100px;
+      #filters{
+        display: block;
+        .submit-filter-desktop{
+          display: block;
+        }
+        .submit-filter-mobile{
+          display: none;
+        }
+        .input-filter{
+          width: 100%;
+          margin-top: 15px;
+          border: none;
+          background-color: white;
+          padding: 10px;
+          border-radius: 23px;
+          box-shadow: 6px 3px 3px rgba(192, 192, 164, 0.226);
+        }
+      }
     }
     #games-right{
       width: 70%;
@@ -35,13 +50,79 @@
     }
   }
 }
-
-.input-filter{
-  width: 100%;
-  margin-top: 15px;
-  border: none;
-  background-color: white;
-  padding: 10px;
-  border-radius: 23px;
-  box-shadow: 6px 3px 3px rgba(192, 192, 164, 0.226);
+@media(max-width: 900px) {
+  #games{
+    display: block;
+    padding: 5%;
+    margin-bottom: 50px;
+    #games-left{
+      display: block;
+      height: fit-content;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      padding: 15px;
+      background-color: #F4F4F4;
+      #filters{
+        form{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        .submit-filter-desktop{
+          display: none;
+        }
+        .submit-filter-mobile{
+          display: block;
+        }
+        .input-filter{
+          margin-top: 0px;
+          border:none;
+          // border-bottom: solid 1px grey;
+          background-color: #F4F4F4;
+        }
+        #category{
+          width: 100px
+        }
+        #age{
+          width: 40px
+        }
+        #players{
+          width: 90px
+        }
+        #city{
+          width: 40px
+        }
+      }
+    }
+    #games-right{
+      width: 100%;
+      margin-top: 100px;
+      .games-grid{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+      h2{
+        color: black;
+      }
+      .game-box{
+        margin-bottom: 15px;
+        h2{
+          height: 70px;
+        }
+        img{
+          height: 100px;
+        }
+        .about-this-game{
+          display: block;
+          p{
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}
 }
