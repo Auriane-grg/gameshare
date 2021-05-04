@@ -1,6 +1,7 @@
-<div style="padding: 5%; position: fixed; left: 10px; top: 0px; background-color:#F4F4F4; width: 100%">
+<div style="padding: 5%; position: fixed; left: 10px; top: 0px; background-color:#F4F4F4; width: 100%; display: flex; justify-content:space-between;">
 <%= link_to dashboard_path do %>
-  <p style="margin:0px"><i class="fas fa-arrow-circle-left" style="margin-right: 15px"></i>Back to my dashboard</p>
+  <p style="margin:0px"><i class="fas fa-arrow-circle-left" style="margin-right: 10px"></i>Back to dashboard</p>
+  <%= link_to new_game_path, style:"color:#D90429;" do %>  New game<i class="fas fa-plus-circle" style="margin-left: 10px; color:#D90429; font-size: 20px"></i><% end %>
 <% end %>
 </div>
 
@@ -41,11 +42,10 @@
               <%= link_to edit_game_path(game) do %><i class="far fa-edit"></i><% end %>
               <%= link_to game_path(game), method: :delete, data: { confirm: "Are you sure?" } do %><i class="far fa-trash-alt"></i><% end %>
             </div>
-            </div>
           </div>
         </div>
       <% end %>
     </div>
   <% end %>
 </div>
-<%= link_to new_game_path, style:"position: fixed; bottom: 54px; width: 70%; margin-left: 15%; margin-right: 15%; background-color: #D90429; text-align:center; color:white; padding: 8px; border-radius: 30px;" do %><i class="fas fa-plus-circle" style="margin-right: 15px; color:white"></i> ADD A PLAYBOARD<% end %>
+

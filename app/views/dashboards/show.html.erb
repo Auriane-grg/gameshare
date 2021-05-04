@@ -28,8 +28,8 @@
         <%= link_to destroy_user_session_path, method: :delete do %>
         <button class="white-btn my-games-mob">Log out <i class="fas fa-chevron-right"></i></button>
         <% end %>
-        <a href="/dashboard/my_games" style="color: black;"><button class="white-btn" style="color: black;">My games <i class="fas fa-chevron-right"></i></a>
-        <button class="white-btn my-games-booking-mob">My games' bookings <i class="fas fa-chevron-right"></i></button>
+        <button class="white-btn" style="color: black;"><a href="/dashboard/my_games" style="color: black;">My games <i class="fas fa-chevron-right"></i></a>
+        <button class="white-btn my-games-booking-mob"><a href="/dashboard/:my_games">My games' bookings <i class="fas fa-chevron-right"></i></a></button>
         <button class="white-btn my-booking-mob">My bookings <i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
