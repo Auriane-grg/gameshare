@@ -32,7 +32,8 @@
         width: 20%;
         position: sticky;
         position: -webkit-sticky;
-        top : 200px;
+        top : 100px;
+        height: fit-content;
       }
       #my-infos{
         display: block;
