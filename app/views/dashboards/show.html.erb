@@ -84,10 +84,34 @@
 
       <div id="dash-my-games-bookings" class='d-none'>
         <h1>My games' bookings</h1>
+        <div class="booking-grid">
+          <% current_user.games.each do |game| %>
+            <% game.bookings.each do |booking| %>
+              <div class="booking-box">
+                <h2><%= booking.game.name %></h2>
+                <p><%= booking.start %> <i class="fas fa-arrow-circle-right"></i> <%= booking.end %></p>
+                <%= cl_image_tag booking.game.photo.key %>
+                <p>Booked by <%= booking.user.first_name %></p>
+                <p class="booking-price"></p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
 
       <div id="dash-my-bookings" class='d-none'>
         <h1>My bookings</h1>
+        <div class="booking-grid">
+          <% current_user.bookings.each do |booking| %>
+            <div class="booking-box">
+              <h2><%= booking.game.name %></h2>
+              <p><%= booking.start %> <i class="fas fa-arrow-circle-right"></i> <%= booking.end %></p>
+              <%= cl_image_tag booking.game.photo.key %>
+              <p>Booked to <%= booking.game.user.first_name %></p>
+              <p class="booking-price"></p>
+            </div>
+          <% end %>
+        </div>
       </div>
 
     </div>
