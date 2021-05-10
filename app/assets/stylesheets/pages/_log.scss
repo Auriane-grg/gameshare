@@ -2,15 +2,7 @@
 @media(min-width:900px){
   .log-in{
     padding: 50px 400px;
-    text-align: center;
-    h2{
-      margin-bottom: 30px;
-    }
-    a{
-      color: grey
-    }
     .form-actions{
-      margin-top: 30px;
       .bric-btn{
         width: fit-content;
         padding-left: 40px;
@@ -23,67 +15,42 @@
   }
   .log{
     padding: 50px 200px;
-    text-align: center;
-    h2{
-      margin-bottom: 30px;
-    }
-    a{
-      color: grey}
-    .form-actions{
-      margin-top: 30px;
-    .bric-btn{
-      width: fit-content;
-      padding-left: 40px;
-      padding-right: 40px;
-      text-transform: uppercase;
-      margin-right: 20px;
-    }
   }
-    .form{
-      text-align: center;
-    }
+  .form-actions{
+  .bric-btn{
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    margin-right: 20px;
   }
-  .form-inputs{
+  }
+  form{
     .log-block{
       display:inline-flex;
       width: 100%;
-      justify-content: center;
-    }
-    input{
-      border-radius: 50px;
-      border: none;
     }
     .form-group{
       margin-right: 15px;
       width: -webkit-fill-available;
     }
-    .form-group.file.optional.user_photo{
-      display: inline-flex;
-      margin-top: 30px;
-      label{
-        margin-right: 15px;
-        width: 150px;
-      }
-      input{
-        border-radius: 0px;
-      }
+  }
+  .form-group.file.optional{
+    display: inline-flex;
+    label{
+      margin-right: 15px;
+      width: 200px;
+    }
+    input{
+      border-radius: 0px;
     }
   }
 }
-
 
 @media(max-width:900px){
   .log-in{
     padding: 50px 100px;
-    text-align: center;
-    h2{
-      margin-bottom: 30px;
-    }
-    a{
-      color: grey
-    }
     .form-actions{
-      margin-top: 30px;
       .bric-btn{
         width: fit-content;
         padding-left: 40px;
@@ -96,128 +63,119 @@
   }
   .log{
     padding: 50px 100px;
-    text-align: center;
-    h2{
-      margin-bottom: 30px;
-    }
-    a{
-      color: grey}
-    .form-actions{
-      margin-top: 30px;
-    .bric-btn{
-      width: fit-content;
-      padding-left: 40px;
-      padding-right: 40px;
-      text-transform: uppercase;
-      margin-right: 20px;
-    }
   }
-    .form{
-      text-align: center;
-    }
+  .form-actions{
+  .bric-btn{
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    margin-right: 20px;
   }
-  .form-inputs{
+  }
+  form{
     .log-block{
       display:inline-flex;
       width: 100%;
-      justify-content: center;
-    }
-    input{
-      border-radius: 50px;
-      border: none;
     }
     .form-group{
       margin-right: 15px;
       width: -webkit-fill-available;
     }
-    .form-group.file.optional.user_photo{
-      display: inline-flex;
-      margin-top: 30px;
-      label{
-        margin-right: 15px;
-        width: 150px;
-      }
-      input{
-        border-radius: 0px;
-      }
+  }
+  .form-group.file.optional{
+    display: inline-flex;
+    label{
+      margin-right: 15px;
+      width: 230px;
+    }
+    input{
+      border-radius: 0px;
     }
   }
 }
-
 
 @media(max-width:600px){
   .log-in{
     padding: 15px;
-    text-align: center;
-    h2{
-      margin-bottom: 30px;
-    }
-    a{
-      color: grey
-    }
-    .form-actions{
-      margin-top: 30px;
-      .bric-btn{
-        width: fit-content;
-        padding-left: 40px;
-        padding-right: 40px;
-        text-transform: uppercase;
-        margin-right: 20px;
-        margin-bottom: 15px;
-      }
-    }
+    margin-bottom: 50px;
+    // .form-actions{
+    //   .bric-btn{
+    //     width: fit-content;
+    //     padding-left: 40px;
+    //     padding-right: 40px;
+    //     text-transform: uppercase;
+    //     margin-right: 20px;
+    //     margin-bottom: 15px;
+    //   }
+    // }
   }
   .log{
-    padding: 15px;
-    text-align: center;
+    padding: 50px 15px;
     margin-bottom: 50px;
-    h2{
-      margin-bottom: 30px;
-    }
-    .form-actions{
-      margin-top: 30px;
-    .bric-btn{
-      width: 100%;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
+  }
+  .form-actions{
+  .bric-btn{
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+  }
+  form{
     .log-block{
       display:block;
       width: 100%;
-      justify-content: center;
-      a{
-      color: grey;
-      width: 100%;
-      }
-    }
-  }
-    .form{
-      text-align: center;
-    }
-  }
-  .form-inputs{
-    .log-block{
-      display:block;
-      width: 100%;
-      justify-content: center;
-    }
-    input{
-      border-radius: 50px;
-      border: none;
     }
     .form-group{
       margin-right: 15px;
       width: -webkit-fill-available;
     }
-    .form-group.file.optional.user_photo{
-      display: block;
+  }
+  .form-group.file.optional{
+    display: block;
+    label{
+      margin-right: 15px;
+      width: 200px;
+    }
+    input{
+      border-radius: 0px;
+    }
+  }
+}
+
+
+.log, .log-in{
+  text-align: center;
+  h1{
+    margin-bottom: 30px;
+  }
+  a{
+    color: grey
+  }
+  form{
+    margin-top: 30px;
+    input, select, textarea{
+      border-radius: 50px;
+      border: none;
+    }
+    .log-block{
+      text-align: center;
+    }
+    .form-group.file.optional{
       margin-top: 30px;
-      label{
-        margin-right: 15px;
-        width: 150px;
-      }
+      text-align: center;
       input{
         border-radius: 0px;
+      }
+    }
+    .form-actions{
+      margin-top: 30px;
+      text-align: center;
+      .log-block{
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -225,5 +183,75 @@
 
 
 
-
+// @media(max-width:600px){
+//   .log-in{
+//     padding: 15px;
+//     text-align: center;
+//     .form-actions{
+//       margin-top: 30px;
+//       .bric-btn{
+//         width: fit-content;
+//         padding-left: 40px;
+//         padding-right: 40px;
+//         text-transform: uppercase;
+//         margin-right: 20px;
+//         margin-bottom: 15px;
+//       }
+//     }
+//   }
+//   .log{
+//     padding: 15px;
+//     text-align: center;
+//     margin-bottom: 50px;
+//     h1{
+//       margin-bottom: 30px;
+//     }
+//     .form-actions{
+//       margin-top: 30px;
+//     .bric-btn{
+//       width: 100%;
+//       text-transform: uppercase;
+//       margin-bottom: 15px;
+//     }
+//     .log-block{
+//       display:block;
+//       width: 100%;
+//       justify-content: center;
+//       a{
+//       color: grey;
+//       width: 100%;
+//       }
+//     }
+//   }
+//     .form{
+//       text-align: center;
+//     }
+//   }
+//   .form-inputs{
+//     .log-block{
+//       display:block;
+//       width: 100%;
+//       justify-content: center;
+//     }
+//     input{
+//       border-radius: 50px;
+//       border: none;
+//     }
+//     .form-group{
+//       margin-right: 15px;
+//       width: -webkit-fill-available;
+//     }
+//     .form-group.file.optional.user_photo{
+//       display: block;
+//       margin-top: 30px;
+//       label{
+//         margin-right: 15px;
+//         width: 150px;
+//       }
+//       input{
+//         border-radius: 0px;
+//       }
+//     }
+//   }
+// }
 
