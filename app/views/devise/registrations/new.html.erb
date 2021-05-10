@@ -6,35 +6,35 @@
 
     <div class="form-inputs">
       <div class= "log-block">
-      <%= f.input :first_name, style:"width: 55%"%>
-      <%= f.input :last_name, style:"width: 55%" %>
+        <%= f.input :first_name, style:"width: 55%"%>
+        <%= f.input :last_name, style:"width: 55%" %>
       </div>
       <div class= "log-block">
-      <%= f.input :phone %>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-                  </div>
+        <%= f.input :phone %>
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+      </div>
       <div class= "log-block">
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
       </div>
       
       <div class= "log-block">
-      <%= f.input :city_code %>
-      <%= f.input :city %>
+        <%= f.input :city_code %>
+        <%= f.input :city %>
       </div>
       <div class= "log-block"><%= f.input :street_number %>
-      <%= f.input :street %>
+        <%= f.input :street %>
       </div>
-      <%= f.input :photo, as: :file, label: 'Your photo :' %>
-    </div>
+        <%= f.input :photo, as: :file, label: 'Your photo :' %>
+      </div>
 
     <div class="form-actions">
       <div class= "log-block">
