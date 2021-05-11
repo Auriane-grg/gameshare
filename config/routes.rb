@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard, only: [:show] do
-    get "/:my_games" => "pages#my_games"
+    get "/my_games" => "pages#my_games"
+    get "/my_games_bookings" => "pages#my_games_bookings"
+    get "/my_bookings" => "pages#my_bookings"
   end
 
   resources :favorites, only: [:index, :destroy]

@@ -1,0 +1,25 @@
+<div style="padding: 5%; position: fixed; left: 0px; top: 0px; background-color:#F4F4F4; width: 100%; display: flex; justify-content:space-between;">
+<%= link_to dashboard_path do %>
+  <p style="margin:0px"><i class="fas fa-arrow-circle-left" style="margin-right: 10px"></i>Back to dashboard</p>
+<% end %>
+</div>
+
+      <div id="dash-my-games-bookings">
+        <h1 style="margin-top:70px; padding: 15px; text-align:center">My bookings</h1>
+        <div class="booking-grid">
+          <% if @bookings == nil %>
+          <p style="text-align:center">You haven't booked any playboard yet.</p>
+          <% else %>
+            <% @bookings.each do |booking| %>
+              <div class="booking-box">
+                <h2><%= booking.game.name %></h2>
+                <p>Booked to <%= booking.game.user.first_name %></p>
+                <%= cl_image_tag booking.game.photo.key %>
+                <p style="margin:0px; color:black"><%= booking.start %> <i class="fas fa-long-arrow-alt-right"></i> <%= booking.end %></p>
+                <p style="margin:0px; color:black;">$<%= (((booking.end - booking.start) +1)*booking.game.price).to_i %> for <%= ((booking.end - booking.start) +1).to_i %> days</p>
+              </div>
+            <% end %>
+          <% end %>
+          
+        </div>
+      </div>

@@ -6,7 +6,17 @@ class PagesController < ApplicationController
 
   def my_games
     @games = Game.where(user: current_user)
-    authorize @games
     @user = current_user
   end
+
+
+  def my_games_bookings
+    @games = Game.where(user: current_user)
+  end
+
+  def my_bookings
+    @bookings = Booking.where(user: current_user)
+  end
+  
 end
+@book
