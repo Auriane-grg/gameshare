@@ -8,8 +8,8 @@
       <%= form_tag games_path, method: :get do %>
         <%= select_tag :category, options_for_select(["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"]), prompt: 'Category', class:'input-filter' %>
         <%= text_field_tag :age, nil, placeholder: "Age", class:'input-filter' %>
-        <%= text_field_tag :players, nil, placeholder: 'Participants', class:'input-filter' %>
-        <%= text_field_tag :city, nil, placeholder: 'City', class:'input-filter'%>
+        <%= text_field_tag :players, nil, placeholder: 'Players', class:'input-filter' %>
+        <%= text_field_tag :city, nil, placeholder: 'City code', class:'input-filter'%>
         <%= submit_tag "SHOW PLAYBOARDS" , class:'bric-btn submit-filter-desktop' %>
         <button name="button" type="submit" id="send-btn" style="background-color: #D90429; padding: 5px; border-radius: 50px; border:none;" class="submit-filter-mobile">
           <i class="fas fa-search" aria-hidden="true" style="color: white"></i>

@@ -16,7 +16,7 @@ class GamesController < ApplicationController
     end
     
     if params.dig(:city).present?
-      @games = @games.where(city: params[:city].capitalize.lstrip.rstrip)
+      @games = @games.where("? = LEFT(city_code, 2)", params[:city][0.. 1])
     end
 
   end
