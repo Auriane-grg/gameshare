@@ -9,6 +9,7 @@
     display: flex;
     padding: 5%;
     justify-content: space-between;
+    margin-top: 20px;
     #games-left{
       padding: 15px;
       width: 300px;
@@ -70,6 +71,7 @@
           display: flex;
           justify-content: space-between;
           width: 100%;
+          margin-top: 20px;
         }
         .submit-filter-desktop{
           display: none;
@@ -87,10 +89,10 @@
           width: 100px
         }
         #age{
-          width: 40px
+          width: 30px
         }
         #players{
-          width: 50px
+          width: 55px
         }
         #city{
           width: 70px

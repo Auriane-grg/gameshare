@@ -6,7 +6,7 @@
     <h3 style="color: black"><b>Filter your search:</b></h3>
     <div id="filters">
       <%= form_tag games_path, method: :get do %>
-        <%= select_tag :category, options_for_select(["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"]), prompt: 'Category', class:'input-filter' %>
+        <%= select_tag :category, options_for_select(["Escape game", "Cooperative", "Strategy game", "Party game", "Card game", "Classic game", "General culture"]), prompt: 'Category', class:'input-filter' %>
         <%= text_field_tag :age, nil, placeholder: "Age", class:'input-filter' %>
         <%= text_field_tag :players, nil, placeholder: 'Players', class:'input-filter' %>
         <%= text_field_tag :city, nil, placeholder: 'City code', class:'input-filter'%>
@@ -27,7 +27,11 @@
                 <%= cl_image_tag game.photo.key %>
                 <div class="about-this-game">
                   <p><%= game.category %></p>
-                  <p><%= game.min_players %> to <%= game.max_players %> <i class="fas fa-user-friends"></i></p>
+                  <% if  game.min_players == game.max_players%>
+                    <p><%= game.max_players %> <i class="fas fa-user-friends"></i></p>
+                  <% else %>
+                    <p><%= game.min_players %> to <%= game.max_players %> <i class="fas fa-user-friends"></i></p>
+                  <% end %>
                 </div>
                 <div class="last-line">
                 <p class="black" style="margin-bottom: 0px"><b><%= game.price %> $ a day</b></p>

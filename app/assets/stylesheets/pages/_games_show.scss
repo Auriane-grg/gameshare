@@ -53,14 +53,13 @@
 @media(max-width:900px){
   #show-game{
     display: block;
-    margin: 15%;
-    background-color: white;
-    padding: 5%;
+    margin: 10%;
     img{
-      width: 100%;
+      margin-left: 5%;
+      margin-right: 5%;
     }
     #game-titles{
-      padding: 5%;
+      padding: 2%;
     }
     #game-about{
       padding: 5%;
@@ -73,6 +72,11 @@
   }
   .btn-inside{
     display: block;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 1;
   }
   #popup-frame{
     display: none;
@@ -113,9 +117,11 @@
     display: block;
     margin: 0%;
     background-color: #f4f4f4;
-    padding: 0;
+    padding: 15px;
     img{
       width: 100%;
+      margin-left: 0%;
+    margin-right: 0%;
     }
     #game-titles{
       padding: 5%;
@@ -131,11 +137,12 @@
     }
     #game-description{
       padding:5%;
+      margin-bottom: 100px;
     }
     .btn-inside{
       display: block;
       position: fixed;
-      bottom: 5px;
+      bottom: 55px;
       z-index: 1;
     }
     #popup-frame{
@@ -144,6 +151,7 @@
       z-index: 1;
       position:fixed;
       top: 0;
+      bottom: 0;
       width: 100%;
       height: 100vh;
       padding: 5%;

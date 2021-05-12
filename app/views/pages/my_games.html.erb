@@ -1,15 +1,14 @@
-<div style="padding: 5%; position: fixed; left: 0px; top: 0px; background-color:#F4F4F4; width: 100%; display: flex; justify-content:space-between;">
+<div class="mob-nav-dash">
 <%= link_to dashboard_path do %>
   <p style="margin:0px"><i class="fas fa-arrow-circle-left" style="margin-right: 10px"></i>Back to dashboard</p>
   <%= link_to new_game_path, style:"color:#D90429;" do %>  New game<i class="fas fa-plus-circle" style="margin-left: 10px; color:#D90429; font-size: 20px"></i><% end %>
 <% end %>
 </div>
 
-<div id="dash-my-games" style="padding: 5%; margin-top: 50px">
+<div id="dash-my-games" style="padding: 5%">
   <% if @games.count == 0 %>
     <div class="games-count">
       <h1 style="text-align: center">No playboard at the moment! </h1>
-      <%= link_to "ADD A PLAYBOARD TO RENT", new_game_path, class:"bric-btn" %>
     </div>
   <% elsif @games.count == 1 %>
     <div class="games-count">

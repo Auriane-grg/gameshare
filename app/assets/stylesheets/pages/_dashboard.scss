@@ -19,6 +19,7 @@
 @media(min-width: 900px) {
   #dashboard{
     padding: 5%;
+    
     #menu-desktop{
       display: block;
     }
@@ -54,6 +55,7 @@
       }
       #right-infos{
         width: 75%;
+        margin-top: 20px;
         .games-grid{
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
@@ -67,46 +69,8 @@
 @media(max-width: 900px) {
   #dashboard{
     padding: 5%;
-    #my-profile {
-      display: flex;
-      justify-content: space-between;
-      #left-dash{
-        width: 40%;
-      }
-      #menu-desktop{
-        display: block;
-      }
-      #menu-mobile{
-        display: none;
-      }
-      #my-infos{
-        display: block;
-        #my-photo{
-          padding: 0px;
-          img{
-            height: 100%;
-            width:100%;
-            border-radius: 30px 30px 0px 0px;
-          }
-        }
-        #my-details{
-          padding: 15px;
-          h2{
-            font-size: 1.6rem;
-          }
-        }
-      }
-      #right-infos{
-        width: 55%;
-      }
-    }
-  }
-}
-
-@media(max-width: 700px) {
-  #dashboard{
-    padding: 5%;
     margin-bottom: 40px;
+    margin-top: 60px;
     #my-profile {
       display: block;
       #menu-desktop{
@@ -143,6 +107,87 @@
         display:none;
       }
     }
+  }
+  #dash-my-games{
+    margin-top: 120px;
+    .games-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+  .mob-nav-dash{
+    padding: 5%; 
+    position: fixed; 
+    left: 0px; 
+    top: 60px; 
+    background-color:#F4F4F4; 
+    width: 100%; 
+    display: flex; 
+    justify-content:space-between;
+  }
+   #dash-my-games-bookings{
+      padding: 5%;
+      margin-top: 50px;
+     }
+    }
+
+@media(max-width: 700px) {
+  #dashboard{
+    padding: 5%;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    #my-profile {
+      display: block;
+      #menu-desktop{
+        display: none;
+      }
+      #menu-mobile{
+        display: block;
+        margin-top: 20px;
+      }
+      #left-dash{
+        width: 100%;
+        position: sticky;
+      }
+      #my-infos{
+        width: 100%;
+        display: flex;
+        #my-photo{
+          padding: 15px 0px 15px 15px;
+          img{
+            height: 100%;
+            width:100%;
+            border-radius: 30px;
+            object-fit: cover;
+          }
+        }
+        #my-details{
+          padding: 15px;
+          h2{
+            font-size: 1.2rem;
+          }
+        }
+      }
+      #right-infos{
+        display:none;
+      }
+    }
+  }
+  #dash-my-games{ 
+    .games-grid{
+    display: block;
+    }
+  }
+  .mob-nav-dash{
+    padding: 5%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    background-color:#F4F4F4; 
+    width: 100%; 
+    display: flex; 
+    justify-content:space-between;
   }
 }
 

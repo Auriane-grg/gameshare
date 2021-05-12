@@ -3,7 +3,7 @@
   <%= simple_form_for(@game) do |f| %>
   <div class="log-block">
     <%= f.input :name, placeholder: "Game's name" %>
-    <%= f.input :category, prompt: "Select", collection:  ["Escape game", "Cooperative board game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture games"] %>
+    <%= f.input :category, prompt: "Select", collection:  ["Escape game", "Cooperative game", "Strategy game", "Party game", "Card game", "Classic board game", "General culture"] %>
   </div>
   <div class="log-block">
     <%= f.input :description, placeholder: "Explain what this game is about" %>

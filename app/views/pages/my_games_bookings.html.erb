@@ -1,4 +1,4 @@
-<div style="padding: 5%; position: fixed; left: 0px; top: 0px; background-color:#F4F4F4; width: 100%; display: flex; justify-content:space-between;">
+<div class="mob-nav-dash">
 <%= link_to dashboard_path do %>
   <p style="margin:0px"><i class="fas fa-arrow-circle-left" style="margin-right: 10px"></i>Back to dashboard</p>
 <% end %>
@@ -6,12 +6,12 @@
 
       <div id="dash-my-games-bookings">
         <h1 style="margin-top:70px; padding: 15px; text-align:center">My games' bookings</h1>
-        <div class="booking-grid">
           <% if @games == nil %>
           <p style="text-align:center">You have no playboard to rent for the moment.</p>
           <% elsif @games.joins(:bookings).count == 0 %>
             <p style="text-align:center">No one has booked your games yet.</p>
           <% else %>
+          <div class="booking-grid">
             <% current_user.games.each do |game| %>
               <% game.bookings.each do |booking| %>
                 <div class="booking-box">
