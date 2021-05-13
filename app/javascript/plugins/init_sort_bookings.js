@@ -11,8 +11,12 @@ const initSortBooking = () => {
     sorting_future_btn.classList.remove('sorting_unselect');
     sorting_previous_btn.classList.remove('sorting_select');
     sorting_previous_btn.classList.add('sorting_unselect');
-    future_booking.classList.remove('d-none');
+    if (future_booking) {
+      future_booking.classList.remove('d-none');
+    };
+    if (previous_booking) {
     previous_booking.classList.add('d-none');
+    };
   });
 
   sorting_previous_btn.addEventListener('click', () => {
@@ -20,8 +24,12 @@ const initSortBooking = () => {
     sorting_previous_btn.classList.add('sorting_select');
     sorting_future_btn.classList.remove('sorting_select');
     sorting_future_btn.classList.add('sorting_unselect');
-    future_booking.classList.add('d-none');
+    if (future_booking) {
+      future_booking.classList.add('d-none');
+    }
+    if (previous_booking) {
     previous_booking.classList.remove('d-none');
+    }
   });
 
 }

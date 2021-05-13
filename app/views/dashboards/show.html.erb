@@ -96,7 +96,7 @@
           <div class="booking-grid">
             <% current_user.games.each do |game| %>
               <% game.bookings.each do |booking| %>
-                <div class="booking-box <% if booking.start >= Date.today %>future-booking<% else %>previous-booking<% end %>">
+                <div class="booking-box <% if booking.start >= Date.today %>future-booking<% else %>previous-booking d-none<% end %>">
                   <h2><%= booking.game.name %></h2>
                   <p>Booked by <%= booking.user.first_name %></p>
                   <%= cl_image_tag booking.game.photo.key %>
