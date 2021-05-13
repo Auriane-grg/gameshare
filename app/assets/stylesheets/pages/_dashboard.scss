@@ -222,3 +222,26 @@
 .games-count{
   margin-bottom: 50px;
 }
+
+.sorting_bookings{
+  display: inline-flex;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  p{
+    margin: 0;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+  }
+  p.sorting_select{
+    background-color: $bric;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    text-align: center;
+  }
+}

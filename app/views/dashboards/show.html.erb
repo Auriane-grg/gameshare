@@ -89,10 +89,14 @@
         <% elsif @games.joins(:bookings).count == 0 %>
           <p>No one has booked your games yet.</p>
         <% else %>
+        <div class="sorting_bookings">
+        <p class="sorting_select">Future rents</p>
+        <p class="sorting_unselect">Previous rents</p>
+        </div>
           <div class="booking-grid">
             <% current_user.games.each do |game| %>
               <% game.bookings.each do |booking| %>
-                <div class="booking-box">
+                <div class="booking-box <% if booking.start >= Date.today %>future-booking<% else %>previous-booking<% end %>">
                   <h2><%= booking.game.name %></h2>
                   <p>Booked by <%= booking.user.first_name %></p>
                   <%= cl_image_tag booking.game.photo.key %>
