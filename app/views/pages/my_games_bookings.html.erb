@@ -11,19 +11,22 @@
           <% elsif @games.joins(:bookings).count == 0 %>
             <p style="text-align:center">No one has booked your games yet.</p>
           <% else %>
-          <div class="booking-grid">
-            <% current_user.games.each do |game| %>
-              <% game.bookings.each do |booking| %>
-                <div class="booking-box">
-                  <h2><%= booking.game.name %></h2>
-                  <p>Booked by <%= booking.user.first_name %></p>
-                  <%= cl_image_tag booking.game.photo.key %>
-                  <p style="margin:0px; color:black"><%= booking.start %> <i class="fas fa-long-arrow-alt-right"></i> <%= booking.end %></p>
-                  <p style="margin:0px; color:black;">$<%= (((booking.end - booking.start) +1)*booking.game.price).to_i %> for <%= ((booking.end - booking.start) +1).to_i %> days</p>
-                </div>
+            <div class="sorting-game-bookings">
+              <p class="sorting-game-select">Future rents</p>
+              <p class="sorting-game-unselect">Previous rents</p>
+            </div>
+            <div class="booking-grid">
+              <% current_user.games.each do |game| %>
+                <% game.bookings.each do |booking| %>
+                  <div class="booking-box <% if booking.start >= Date.today %>future-game-booking<% else %>previous-game-booking d-none<% end %>">
+                    <h2><%= booking.game.name %></h2>
+                    <p>Booked by <%= booking.user.first_name %></p>
+                    <%= cl_image_tag booking.game.photo.key %>
+                    <p style="margin:0px; color:black"><%= booking.start %> <i class="fas fa-long-arrow-alt-right"></i> <%= booking.end %></p>
+                    <p style="margin:0px; color:black;">$<%= (((booking.end - booking.start) +1)*booking.game.price).to_i %> for <%= ((booking.end - booking.start) +1).to_i %> days</p>
+                  </div>
+                <% end %>
               <% end %>
-            <% end %>
+            </div>
           <% end %>
-          
-        </div>
       </div>

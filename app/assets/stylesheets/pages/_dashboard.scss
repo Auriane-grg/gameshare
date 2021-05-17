@@ -223,7 +223,7 @@
   margin-bottom: 50px;
 }
 
-.sorting_bookings{
+.sorting-bookings, .sorting-game-bookings{
   display: inline-flex;
   background-color: white;
   border-radius: 50px;
@@ -237,7 +237,7 @@
     width: 50%;
     text-align: center;
   }
-  p.sorting_select{
+  p.sorting-select, p.sorting-game-select{
     background-color: $bric;
     border-radius: 50px;
     border: none;

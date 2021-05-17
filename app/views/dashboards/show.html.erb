@@ -89,14 +89,14 @@
         <% elsif @games.joins(:bookings).count == 0 %>
           <p>No one has booked your games yet.</p>
         <% else %>
-        <div class="sorting_bookings">
-        <p class="sorting_select">Future rents</p>
-        <p class="sorting_unselect">Previous rents</p>
-        </div>
+          <div class="sorting-game-bookings">
+            <p class="sorting-game-select">Future rents</p>
+            <p class="sorting-game-unselect">Previous rents</p>
+          </div>
           <div class="booking-grid">
             <% current_user.games.each do |game| %>
               <% game.bookings.each do |booking| %>
-                <div class="booking-box <% if booking.start >= Date.today %>future-booking<% else %>previous-booking d-none<% end %>">
+                <div class="booking-box <% if booking.start >= Date.today %>future-game-booking<% else %>previous-game-booking d-none<% end %>">
                   <h2><%= booking.game.name %></h2>
                   <p>Booked by <%= booking.user.first_name %></p>
                   <%= cl_image_tag booking.game.photo.key %>
@@ -114,9 +114,13 @@
         <% if current_user.bookings.count == 0 %>
           <p>You haven't booked any playboard yet.</p>
         <% else %>
+          <div class="sorting-bookings">
+            <p class="sorting-select">Future rents</p>
+            <p class="sorting-unselect">Previous rents</p>
+          </div>
           <div class="booking-grid">
             <% current_user.bookings.each do |booking| %>
-                <div class="booking-box">
+                <div class="booking-box <% if booking.start >= Date.today %>future-booking<% else %>previous-booking d-none<% end %>">
                   <h2><%= booking.game.name %></h2>
                   <p>Booked to <%= booking.game.user.first_name%></p>
                   <%= cl_image_tag booking.game.photo.key %>
